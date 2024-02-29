@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+
+        :root{
+            --primary-color: yellow;
+            --secondary-color:red;
+            --font-size: 20px;
+        }
+        h1{
+            color: var(--secondary-color);
+        }
+        h5{
+            background-color: var(--secondary-color);
+        }
+        .box{
+            border: 2px solid black;
+        }
+        .box p{
+            color:var(--secondary-color);
+            font-size: var(--font-size);
+            width: calc(100% - 500px);
+        }
+        .sidebar{
+            background-color: yellow;
+        }
+        .content{
+            background-color: red;
+        }
+        .container{
+            display: grid;
+            gap: 20px;
+            grid-template-rows: 500px;
+            grid-template-columns: 200px calc(100% - 200px - 20px);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Custom Properties</h1>
+    <h5>Also commonly know as CSS variables</h5>
+    <div class="box">
+        <h3>I am doing something</h3>
+        <p>তোমায় ভালোবাসি মানে এই নয় যে শুধু তোমার ভালোটাতেই আমি মুগ্ধ ভীষণ। সত্য তো এটাই তোমার যে ছন্নছাড়া স্বভাবগুলো কেউ জানে না, কেউ কেউ যাকে বলে মিথ্যে মায়া, তাও আমার কাছে বড্ড আপন তোমার মতন।
+            তোমায় ভালোবাসি বলেই তোমার কাছে আমি সত্য লুকাই না। বলে দেই কোন মিথ্যেটা বলে পার পেয়েছি মায়ের থেকে। কোন স্বপ্নটা দেখে পাগল ভেবেছি নিজেকে ইচ্ছে মতন। কোন দুঃখটা লুকাতে গিয়েও কেঁদে ফেলেছি তোমার বুকে। তোমার নেওয়া কোন যত্নটা ভুলবো না আমি নিজের থেকে।
+            তোমায় ভালোবাসি বলেই, এ আমি তোমার কাছে অন্য রকম। যে আমিটাকে কেউ জানে না কেউ বোঝে না তোমার মতোন। তাই হয়তো এসব সত্য জেনেই ফেলে, মুগ্ধ চোখে তোমায় ভালোবাসতে দেখে তোমার চোখে হারিয়ে যাই আমি বারবারে।</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">Saidrbar</div>
+        <div class="content">Main Content</div>
+    </div>
+</body>
+</html>
